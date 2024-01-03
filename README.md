@@ -24,4 +24,7 @@ native rive.dll:
 cd Native
 premake5.exe vs2022
 ```
+
+NOTE: Download [premake5.exe](https://premake.github.io/download/).
+
 After that, you should be able to open RiveSharpSample.sln in Visual Studio, build, and run!
