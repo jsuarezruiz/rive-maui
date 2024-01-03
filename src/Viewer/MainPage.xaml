@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:rive="clr-namespace:RiveSharp.Views;assembly=RiveSharp.Views.MAUI"
+    x:Class="Viewer.MainPage">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <rive:RivePlayer Source="runner.riv" Grid.Row="0"  Grid.Column="0" />
+        <rive:RivePlayer Source="switch_event_example.riv" Grid.Row="0" Grid.Column="1" />
+        <rive:RivePlayer Source="ball.riv" StateMachine="Main State Machine" Grid.Row="1" Grid.Column="0" />
+        <rive:RivePlayer Source="tape.riv" Grid.Row="1" Grid.Column="1" />
+    </Grid>
+</ContentPage>

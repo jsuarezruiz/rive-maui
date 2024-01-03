@@ -4,6 +4,9 @@ RivePlayer control for .NET MAUI. Based on https://github.com/rive-app/rive-shar
 
 ![Rive](images/rive-maui.gif)
 
+Examples:
+-   Viewer.csproj: A simple .NET MAUI app that draws 4 .riv files with pointer events.
+
 ## Building
 
 You just need to fetch the rive-cpp submodule:
