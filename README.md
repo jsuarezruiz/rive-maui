@@ -2,6 +2,8 @@
 
 RivePlayer control for .NET MAUI. Based on https://github.com/rive-app/rive-sharp
 
+_(Work in progress)_
+
 ![Rive](images/rive-maui.gif)
 
 Examples:
