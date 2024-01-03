@@ -1,6 +1,6 @@
 # Rive .NET MAUI
 
-RivePlayer control for .NET MAUI.
+RivePlayer control for .NET MAUI. Based on https://github.com/rive-app/rive-sharp
 
 ![Rive](images/rive-maui.gif)
 
