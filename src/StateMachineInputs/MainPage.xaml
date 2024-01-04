@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="StateMachineInputs.MainPage"
+    xmlns:rive="clr-namespace:RiveSharp.Views;assembly=RiveSharp.Views.MAUI">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="400" />
+        </Grid.ColumnDefinitions>
+        <rive:RivePlayer Source="https://public.rive.app/community/runtime-files/2244-4463-animated-login-screen.riv" Grid.Column="0">
+            <rive:BoolInput Target="isChecking" Value="{Binding Source={x:Reference IsChecking},Path=IsChecked}" />
+            <rive:NumberInput Target="numLook" Value="{Binding Source={x:Reference NumLook},Path=Value}" />
+            <rive:BoolInput Target="isHandsUp" Value="{Binding Source={x:Reference IsHandsUp},Path=IsChecked}" />
+            <rive:TriggerInput Target="trigFail" x:Name="TrigFail" />
+            <rive:TriggerInput Target="trigSuccess" x:Name="TrigSuccess" />
+        </rive:RivePlayer>
+        <StackLayout VerticalOptions="Center" Padding="20" Spacing="10" Grid.Column="1">
+            <HorizontalStackLayout>
+                <CheckBox x:Name="IsChecking" />
+                <Label Text="Looking" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+            <Slider Minimum="0" Maximum="100" Value="0" x:Name="NumLook" IsEnabled="{Binding Source={x:Reference IsChecking},Path=IsChecked}" />
+            <HorizontalStackLayout>
+                <CheckBox x:Name="IsHandsUp" />
+                <Label Text="Hands Up" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+            <Button Text="Failure" Clicked="OnFailureClicked" />
+            <Button Text="Success" Clicked="OnSuccessClicked" />
+        </StackLayout>
+    </Grid>
+</ContentPage>
