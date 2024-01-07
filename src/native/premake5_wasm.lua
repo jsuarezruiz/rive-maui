@@ -2,12 +2,12 @@ workspace "rive-cpp"
 
 configurations {"Release"}
 
--- Are we in the "rive-sharp" or "rive" repository?
+-- Are we in the "rive-maui" or "rive" repository?
 local git_handle = io.popen("git remote -v")
 local git_remote = git_handle:read("*a")
 git_handle:close()
-if string.find(git_remote, "rive%-sharp") then
-    -- In rive-sharp. Rive runtime is a submodule.
+if string.find(git_remote, "rive%-maui") then
+    -- In rive-maui. Rive runtime is a submodule.
     RIVE_RUNTIME_DIR = "../submodules/rive-cpp"
 else
     -- In rive. Rive runtime is further up the tree.
